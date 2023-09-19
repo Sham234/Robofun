@@ -300,9 +300,27 @@ class Membershipidinput extends StatelessWidget {
                   width: 550,
                   height: 62,
                   decoration: ShapeDecoration(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 255, 255, 255),
                     shape:
                         RoundedRectangleBorder(side: BorderSide(width: 0.50)),
+                  ),
+                  child: TextFormField(
+                    // You can customize the appearance of the input field here
+                    decoration: InputDecoration(
+                      hintText: 'Typing something',
+                      border: InputBorder.none, // Remove the default border
+                    ),
+                    // Create a controller to retrieve user input
+                    controller:
+                        TextEditingController(), // You can initialize this controller with an initial value if needed
+                    // You can handle the user's input using onChanged or onFieldSubmitted
+                    onChanged: (value) {
+                      // Handle user input as it changes
+                      // 'value' will contain the text entered by the user
+                    },
+                    onFieldSubmitted: (value) {
+                      // Handle user input when they submit the field (e.g., press Enter on the keyboard)
+                    },
                   ),
                 ),
               ),
