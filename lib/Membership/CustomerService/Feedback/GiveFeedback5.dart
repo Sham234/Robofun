@@ -1,4 +1,7 @@
-
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback1.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback2.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback3.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback4.dart';
 import 'package:flutter/material.dart';
 import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback.dart';
 import 'FeedbackThanks.dart';
@@ -7,43 +10,37 @@ class Givefeedback5 extends StatelessWidget {
   void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return Feedbackthanks();
-  }));
+    }));
   }
 
   void navigateNextPage2(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return Givefeedback();
-  }));
+    }));
   }
 
   void navigateNextPage3(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
-  }));
+      return Givefeedback1();
+    }));
   }
 
   void navigateNextPage4(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
-  }));
+      return Givefeedback2();
+    }));
   }
 
   void navigateNextPage5(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
-  }));
+      return Givefeedback3();
+    }));
   }
 
   void navigateNextPage6(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
-  }));
-  }
-
-  void navigateNextPage7(BuildContext ctx) {
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
-  }));
+      return Givefeedback4();
+    }));
   }
 
   @override
@@ -115,56 +112,60 @@ class Givefeedback5 extends StatelessWidget {
                 left: 814,
                 top: 737,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage2(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
-                      ), 
-                child: Container(
-                  width: 269,
-                  height: 88,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
+                  onPressed: () {
+                    navigateNextPage2(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
                   ),
-                ),
+                  child: Container(
+                    width: 269,
+                    height: 88,
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x3F000000),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Positioned(
                 left: 467,
                 top: 737,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
-                      ), 
-                child: Container(
-                  width: 269,
-                  height: 88,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
+                  onPressed: () {
+                    navigateNextPage(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
                   ),
-                ),
+                  child: Container(
+                    width: 269,
+                    height: 88,
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x3F000000),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Positioned(
@@ -193,12 +194,14 @@ class Givefeedback5 extends StatelessWidget {
                   ),
                 ),
               ),
-            
+
               Positioned(
                 left: 1835.30,
                 top: -828.86,
                 child: Transform(
-                  transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(1.13),
+                  transform: Matrix4.identity()
+                    ..translate(0.0, 0.0)
+                    ..rotateZ(1.13),
                   child: Container(
                     width: 1180.58,
                     height: 1182.74,
@@ -208,7 +211,9 @@ class Givefeedback5 extends StatelessWidget {
                           left: -710.33,
                           top: 333.79,
                           child: Transform(
-                            transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(0.03),
+                            transform: Matrix4.identity()
+                              ..translate(0.0, 0.0)
+                              ..rotateZ(0.03),
                             child: Container(
                               width: 863,
                               height: 863,
@@ -223,12 +228,13 @@ class Givefeedback5 extends StatelessWidget {
                           left: -31.40,
                           top: 529.38,
                           child: Transform(
-                            transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(0.03),
+                            transform: Matrix4.identity()
+                              ..translate(0.0, 0.0)
+                              ..rotateZ(0.03),
                             child: Container(
                               width: 284,
                               height: 283,
-                              child: Stack(children: [
-                              ]),
+                              child: Stack(children: []),
                             ),
                           ),
                         ),
@@ -236,12 +242,13 @@ class Givefeedback5 extends StatelessWidget {
                           left: -185.79,
                           top: 970.23,
                           child: Transform(
-                            transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(0.03),
+                            transform: Matrix4.identity()
+                              ..translate(0.0, 0.0)
+                              ..rotateZ(0.03),
                             child: Container(
                               width: 284,
                               height: 284,
-                              child: Stack(children: [
-                              ]),
+                              child: Stack(children: []),
                             ),
                           ),
                         ),
@@ -250,18 +257,26 @@ class Givefeedback5 extends StatelessWidget {
                   ),
                 ),
               ),
-               // star 1
+              // star 1
               Positioned(
                 left: 177,
                 top: 193,
-                
-                child: Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/90x90"),
-                      fit: BoxFit.contain,
+                child: TextButton(
+                  onPressed: () {
+                    navigateNextPage3(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image:
+                            NetworkImage("https://via.placeholder.com/90x90"),
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ),
@@ -272,20 +287,23 @@ class Givefeedback5 extends StatelessWidget {
                 left: 297,
                 top: 193,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage3(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
+                  onPressed: () {
+                    navigateNextPage4(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image:
+                            NetworkImage("https://via.placeholder.com/90x90"),
+                        fit: BoxFit.contain,
                       ),
-                child: Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/90x90"),
-                      fit: BoxFit.contain,
                     ),
                   ),
-                ),
                 ),
               ),
 
@@ -294,20 +312,23 @@ class Givefeedback5 extends StatelessWidget {
                 left: 417,
                 top: 193,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage4(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
+                  onPressed: () {
+                    navigateNextPage5(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image:
+                            NetworkImage("https://via.placeholder.com/90x90"),
+                        fit: BoxFit.contain,
                       ),
-                child: Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/90x90"),
-                      fit: BoxFit.contain,
                     ),
                   ),
-                ),
                 ),
               ),
 
@@ -316,20 +337,23 @@ class Givefeedback5 extends StatelessWidget {
                 left: 537,
                 top: 193,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage5(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
+                  onPressed: () {
+                    navigateNextPage6(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image:
+                            NetworkImage("https://via.placeholder.com/90x90"),
+                        fit: BoxFit.contain,
                       ),
-                child: Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/90x90"),
-                      fit: BoxFit.contain,
                     ),
                   ),
-                ),
                 ),
               ),
 
@@ -337,11 +361,6 @@ class Givefeedback5 extends StatelessWidget {
               Positioned(
                 left: 657,
                 top: 193,
-                child: TextButton(
-                      onPressed:  () {navigateNextPage6(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
-                      ),
                 child: Container(
                   width: 120,
                   height: 120,
@@ -351,7 +370,6 @@ class Givefeedback5 extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                   ),
-                ),
                 ),
               ),
 
@@ -368,7 +386,9 @@ class Givefeedback5 extends StatelessWidget {
                           left: 0,
                           top: 45.04,
                           child: Transform(
-                            transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                            transform: Matrix4.identity()
+                              ..translate(0.0, 0.0)
+                              ..rotateZ(-1.57),
                             child: Container(
                               width: 45.04,
                               decoration: ShapeDecoration(

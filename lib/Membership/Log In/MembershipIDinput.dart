@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'VerificationPage.dart';
 
-  class Membershipidinput extends StatelessWidget {
-    void navigateNextPage(BuildContext ctx) {
-      Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-        return VerificationPage();
-  }));
+class Membershipidinput extends StatelessWidget {
+  void navigateNextPage(BuildContext ctx) {
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return VerificationPage();
+    }));
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +35,8 @@ import 'VerificationPage.dart';
                   height: 864,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/775x864"),
+                      image:
+                          NetworkImage("https://via.placeholder.com/775x864"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -79,8 +81,7 @@ import 'VerificationPage.dart';
                       )
                     ],
                   ),
-                  child: Stack(children: [
-                  ]),
+                  child: Stack(children: []),
                 ),
               ),
               Positioned(
@@ -144,28 +145,30 @@ import 'VerificationPage.dart';
                 left: 1089,
                 top: 752,
                 child: TextButton(
-                  onPressed:  () {navigateNextPage(context);},
-              style:  TextButton.styleFrom (
-              padding:  EdgeInsets.zero,
-              ),
-                child: Container(
-                  width: 144,
-                  height: 60,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF1B41A4),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0xFF3197FD),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
+                  onPressed: () {
+                    navigateNextPage(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
                   ),
-                ),
+                  child: Container(
+                    width: 144,
+                    height: 60,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFF1B41A4),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0xFF3197FD),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Positioned(
@@ -283,7 +286,8 @@ import 'VerificationPage.dart';
                   height: 229,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/387x229"),
+                      image:
+                          NetworkImage("https://via.placeholder.com/387x229"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -297,7 +301,8 @@ import 'VerificationPage.dart';
                   height: 62,
                   decoration: ShapeDecoration(
                     color: Colors.white,
-                    shape: RoundedRectangleBorder(side: BorderSide(width: 0.50)),
+                    shape:
+                        RoundedRectangleBorder(side: BorderSide(width: 0.50)),
                   ),
                 ),
               ),
@@ -314,7 +319,9 @@ import 'VerificationPage.dart';
                           left: 0,
                           top: 45.04,
                           child: Transform(
-                            transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                            transform: Matrix4.identity()
+                              ..translate(0.0, 0.0)
+                              ..rotateZ(-1.57),
                             child: Container(
                               width: 45.04,
                               decoration: ShapeDecoration(

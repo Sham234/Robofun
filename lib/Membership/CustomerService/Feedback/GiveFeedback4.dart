@@ -1,4 +1,8 @@
 import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback1.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback2.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback3.dart';
+import 'package:amtelbot/Membership/CustomerService/Feedback/GiveFeedback5.dart';
 import 'FeedbackThanks.dart';
 import 'package:flutter/material.dart';
 
@@ -17,31 +21,25 @@ class Givefeedback4 extends StatelessWidget {
 
     void navigateNextPage3(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
+      return Givefeedback1();
   }));
   }
 
   void navigateNextPage4(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
+      return Givefeedback2();
   }));
   }
 
   void navigateNextPage5(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
+      return Givefeedback3();
   }));
   }
 
   void navigateNextPage6(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
-  }));
-  }
-
-  void navigateNextPage7(BuildContext ctx) {
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Feedbackthanks();
+      return Givefeedback5();
   }));
   }
 
@@ -250,7 +248,11 @@ class Givefeedback4 extends StatelessWidget {
               Positioned(
                 left: 177,
                 top: 193,
-                
+                child: TextButton(
+                      onPressed:  () {navigateNextPage3(context);},
+                      style:  TextButton.styleFrom (
+                      padding:  EdgeInsets.zero,
+                      ),
                 child: Container(
                   width: 120,
                   height: 120,
@@ -261,6 +263,7 @@ class Givefeedback4 extends StatelessWidget {
                     ),
                   ),
                 ),
+                ),
               ),
 
               // star 2
@@ -268,7 +271,7 @@ class Givefeedback4 extends StatelessWidget {
                 left: 297,
                 top: 193,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage3(context);},
+                      onPressed:  () {navigateNextPage4(context);},
                       style:  TextButton.styleFrom (
                       padding:  EdgeInsets.zero,
                       ),
@@ -290,7 +293,7 @@ class Givefeedback4 extends StatelessWidget {
                 left: 417,
                 top: 193,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage4(context);},
+                      onPressed:  () {navigateNextPage5(context);},
                       style:  TextButton.styleFrom (
                       padding:  EdgeInsets.zero,
                       ),
@@ -311,11 +314,7 @@ class Givefeedback4 extends StatelessWidget {
               Positioned(
                 left: 537,
                 top: 193,
-                child: TextButton(
-                      onPressed:  () {navigateNextPage5(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
-                      ),
+                
                 child: Container(
                   width: 120,
                   height: 120,
@@ -325,7 +324,6 @@ class Givefeedback4 extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                   ),
-                ),
                 ),
               ),
 
