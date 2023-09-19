@@ -1,3 +1,4 @@
+import 'package:amtelbot/Membership/Log%20In/MembershipCardinput.dart';
 import 'package:amtelbot/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 // import 'homepage.dart';
@@ -19,7 +20,7 @@ class FigmaToCodeApp extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
-          HomePage(),
+          Membershipcardinput(),
         ]),
       ),
     );
