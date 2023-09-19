@@ -3,18 +3,19 @@ import 'package:amtelbot/Guest/StartasGuest.dart';
 import 'package:flutter/material.dart';
 
 //Testing
+// ^^
 
 class HomePage extends StatelessWidget {
-void navigateNextPage(BuildContext ctx) {
+  void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return Membershipcardinput();
-}));
+    }));
   }
 
   void navigateNextPage2(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return Startasguest();
-}));
+    }));
   }
 
   @override
@@ -27,7 +28,8 @@ void navigateNextPage(BuildContext ctx) {
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage('https://hype.my/wp-content/uploads/2015/05/New-Malls-Klang-Valley.jpg'),
+              image: NetworkImage(
+                  'https://hype.my/wp-content/uploads/2015/05/New-Malls-Klang-Valley.jpg'),
             ),
           ),
           child: Stack(
@@ -48,8 +50,7 @@ void navigateNextPage(BuildContext ctx) {
                         child: Container(
                           width: 16,
                           height: 16,
-                          child: Stack(children: [
-                          ]),
+                          child: Stack(children: []),
                         ),
                       ),
                     ],
@@ -72,8 +73,7 @@ void navigateNextPage(BuildContext ctx) {
                         child: Container(
                           width: 16,
                           height: 16,
-                          child: Stack(children: [
-                          ]),
+                          child: Stack(children: []),
                         ),
                       ),
                     ],
@@ -98,58 +98,61 @@ void navigateNextPage(BuildContext ctx) {
                 left: 468,
                 top: 298,
                 child: TextButton(
-                onPressed:  () {navigateNextPage(context);},
-                style:  TextButton.styleFrom (
-                padding:  EdgeInsets.zero,
-                ),
-                child: Container(
-                  width: 613,
-                  height: 114,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF31CCFD),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0xFF3197FD),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
+                  onPressed: () {
+                    navigateNextPage(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
                   ),
-                ),
+                  child: Container(
+                    width: 613,
+                    height: 114,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFF31CCFD),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0xFF3197FD),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Positioned(
-                left: 468,
-                top: 484,
-                child: TextButton(
-                onPressed:  () {navigateNextPage2(context);},
-                style:  TextButton.styleFrom (
-                padding:  EdgeInsets.zero,
-                ),
-                child: Container(
-                  width: 613,
-                  height: 114,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF31CCFD),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
+                  left: 468,
+                  top: 484,
+                  child: TextButton(
+                    onPressed: () {
+                      navigateNextPage2(context);
+                    },
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0xFF3197FD),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                ),
-                )
-              ),
+                    child: Container(
+                      width: 613,
+                      height: 114,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFF31CCFD),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        shadows: [
+                          BoxShadow(
+                            color: Color(0xFF3197FD),
+                            blurRadius: 4,
+                            offset: Offset(0, 4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                    ),
+                  )),
               Positioned(
                 left: 609,
                 top: 331,
@@ -211,14 +214,14 @@ void navigateNextPage(BuildContext ctx) {
                   width: 158,
                   height: 158,
                   child: ClipOval(
-                  child: Image.network("https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
-                  fit: BoxFit.cover,
+                    child: Image.network(
+                      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  ),
-                  ),
+                ),
               ),
-
-                Positioned(
+              Positioned(
                 left: 0,
                 top: 0,
                 child: Container(
@@ -234,8 +237,7 @@ void navigateNextPage(BuildContext ctx) {
                         child: Container(
                           width: 16,
                           height: 16,
-                          child: Stack(children: [
-                          ]),
+                          child: Stack(children: []),
                         ),
                       ),
                     ],
