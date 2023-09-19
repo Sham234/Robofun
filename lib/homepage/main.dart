@@ -1,4 +1,3 @@
-import 'package:amtelbot/Membership/Main/MainMenu.dart';
 import 'package:amtelbot/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 // import 'homepage.dart';
@@ -20,7 +19,7 @@ class FigmaToCodeApp extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
-          Mainmenu(),
+          HomePage(),
         ]),
       ),
     );

@@ -2,6 +2,8 @@ import 'package:amtelbot/Membership/Log In/MembershipCardinput.dart';
 import 'package:amtelbot/Guest/StartasGuest.dart';
 import 'package:flutter/material.dart';
 
+//Testing
+
 class HomePage extends StatelessWidget {
 void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
