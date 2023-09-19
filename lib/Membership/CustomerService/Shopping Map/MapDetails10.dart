@@ -1,12 +1,20 @@
 import 'package:amtelbot/Membership/CustomerService/CustomerService.dart';
+import 'package:amtelbot/Membership/CustomerService/Shopping%20Map/ShoppingMap.dart';
 import 'package:flutter/material.dart';
 
 class Mapdetails10 extends StatelessWidget {
   void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return Customerservice();
-}));
-}
+    }));
+  }
+
+  void navigateNextPage2(BuildContext ctx) {
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return Shoppingmap();
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -82,21 +90,29 @@ class Mapdetails10 extends StatelessWidget {
               Positioned(
                 left: 327,
                 top: 213,
-                child: Opacity(
-                  opacity: 0.20,
-                  child: Container(
-                    width: 741,
-                    height: 530,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x3F000000),
-                          blurRadius: 4,
-                          offset: Offset(0, 4),
-                          spreadRadius: 0,
-                        )
-                      ],
+                child: TextButton(
+                  onPressed: () {
+                    navigateNextPage2(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: Opacity(
+                    opacity: 0.20,
+                    child: Container(
+                      width: 741,
+                      height: 530,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                            offset: Offset(0, 4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -107,7 +123,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -132,7 +150,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 485,
                       height: 45,
@@ -157,7 +177,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-3.14),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -182,7 +204,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-3.14),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -207,7 +231,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-3.14),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -232,7 +258,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-3.14),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -257,7 +285,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-3.14),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -282,7 +312,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -307,7 +339,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -332,7 +366,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -357,7 +393,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -382,7 +420,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -407,7 +447,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -432,7 +474,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 142,
                       height: 45,
@@ -457,7 +501,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 157,
                       height: 23,
@@ -472,7 +518,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 80,
                       height: 22,
@@ -487,7 +535,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 80,
                       height: 22,
@@ -502,7 +552,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 102,
                       height: 56,
@@ -527,7 +579,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 102,
                       height: 56,
@@ -705,28 +759,30 @@ class Mapdetails10 extends StatelessWidget {
                 left: 26,
                 top: 743,
                 child: TextButton(
-                      onPressed:  () {navigateNextPage(context);},
-                      style:  TextButton.styleFrom (
-                      padding:  EdgeInsets.zero,
-                      ),
-                child: Container(
-                  width: 169,
-                  height: 75,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0xFF3197FD),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
+                  onPressed: () {
+                    navigateNextPage(context);
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
                   ),
-                ),
+                  child: Container(
+                    width: 169,
+                    height: 75,
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0xFF3197FD),
+                          blurRadius: 4,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Positioned(
@@ -873,7 +929,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 102,
                       height: 56,
@@ -898,7 +956,9 @@ class Mapdetails10 extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.20,
                   child: Transform(
-                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-1.57),
                     child: Container(
                       width: 102,
                       height: 56,
@@ -961,7 +1021,9 @@ class Mapdetails10 extends StatelessWidget {
                 left: 593,
                 top: 277,
                 child: Transform(
-                  transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-3.14),
+                  transform: Matrix4.identity()
+                    ..translate(0.0, 0.0)
+                    ..rotateZ(-3.14),
                   child: Container(
                     width: 517,
                     height: 142,
