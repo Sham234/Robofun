@@ -1,11 +1,42 @@
+import 'package:amtelbot/Membership/Main/Cart.dart';
 import 'package:amtelbot/Membership/Main/EmptyCart.dart';
 import 'package:amtelbot/Membership/Main/RemoveProduct.dart';
 import 'package:flutter/material.dart';
 import 'CartNumberDisplay.dart';
 import 'package:amtelbot/Membership/CustomerService/CustomerService.dart';
 import 'package:amtelbot/Membership/Log In/MemberAccount.dart';
+import 'Product.dart';
 
-class Mainmenu extends StatelessWidget {
+class Mainmenu extends StatefulWidget {
+  @override
+  _MainmenuState createState() => _MainmenuState();
+}
+
+class _MainmenuState extends State<Mainmenu> {
+  final myController = TextEditingController();
+
+  Product? currentProduct;
+
+  List<Product> cart = [];
+
+  void displayProductDetails(String scannedBarcode) {
+    // Search for the product with the matching barcode
+    for (var p in products) {
+      if (p.barcode == scannedBarcode) {
+        setState(() {
+          currentProduct = p; // Set the current product
+        });
+        break;
+      }
+    }
+  }
+
+void addToCart(Product product) {
+    setState(() {
+      cart.add(product); // Add the product to the cart
+    });
+  }
+
   void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return Cartnumberdisplay();
@@ -36,10 +67,25 @@ void navigateNextPage5(BuildContext ctx) {
 }));
 }
 
+void navigateNextPage6(BuildContext ctx) {
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return Cart(cart: cart);
+}));
+}
+
+@override
+  void dispose() {
+    myController.dispose(); // Dispose of the TextEditingController
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return MaterialApp( 
+      home: Scaffold( 
+        body: Column(
+          children: [
         Container(
           width: 1550,
           height: 864,
@@ -211,37 +257,7 @@ void navigateNextPage5(BuildContext ctx) {
                 ),
                 ),
               ),
-
-              // unknown
-              Positioned(
-                left: 690, //956
-                top: 730,
-                child:
-              TextButton(
-              onPressed:  () {navigateNextPage(context);},
-              style:  TextButton.styleFrom (
-              padding:  EdgeInsets.zero,
-              ),
-                child: Container(
-                  width: 322,
-                  height: 88,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0xFF3197FD),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
-                ), 
-                ),
-              ),
-              ),
+              
               // rectangle for qr
               Positioned(
                 left: 190,
@@ -263,8 +279,69 @@ void navigateNextPage5(BuildContext ctx) {
                       )
                     ],
                   ),
+                  child: TextFormField(
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    decoration: InputDecoration(
+                      hintText: '',
+                      border: InputBorder.none,
+                    ),
+                    controller: myController,
+                    onChanged: (value) {
+                      // Handle text changes here
+                    },
+                    onFieldSubmitted: (value) async {
+                      // Call the function with the scanned barcode
+                      displayProductDetails(value);
+                      
+                      // Clear the text field after adding the product
+                      myController.clear();
+                    },
+                  ),
+
                 ),
               ),
+            
+            //enter button
+            Positioned(
+                left: 1336,
+                top: 157,
+                child:
+              TextButton(
+              onPressed:  () {if (currentProduct != null) {
+                      addToCart(currentProduct!); // Add the current product to the cart
+                      setState(() {
+                        currentProduct = null; // Clear the current product
+                      });
+                    }},
+              style:  TextButton.styleFrom (
+              padding:  EdgeInsets.zero,
+              ),
+                child: Container(
+                  width: 173,
+                  height: 72,
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0xFF3197FD),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                ), 
+                ),
+              ),
+            ),
+
+          
               Positioned(
                 left: 1378,
                 top: 171,
@@ -278,6 +355,38 @@ void navigateNextPage5(BuildContext ctx) {
                   ),
                 ),
               ),
+
+              // add to cart button
+              Positioned(
+                left: 714,
+                top: 737,
+                child:
+              TextButton(
+              onPressed:  () {navigateNextPage6(context);},
+              style:  TextButton.styleFrom (
+              padding:  EdgeInsets.zero,
+              ),
+                child: Container(
+                  width: 294,
+                  height: 72,
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0xFF3197FD),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                ), 
+                ),
+              ),
+            ),
+
               Positioned(
                 left: 773,
                 top: 754,
@@ -291,10 +400,29 @@ void navigateNextPage5(BuildContext ctx) {
                   ),
                 ),
               ),
+
+              // Display the current product details
+              Positioned(
+                left: 190,
+                top: 235, // Adjust the position as needed
+                child: currentProduct != null
+                    ? Text(
+                        'Product Name: ${currentProduct!.name}\nPrice: RM ${currentProduct!.price.toStringAsFixed(2)}\nQuantity: ${currentProduct!.quantity} x RM ${currentProduct!.price.toStringAsFixed(2)}',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    : SizedBox(), // Hide if there is no current product
+              ),
+              
             ],
-          ),
         ),
-      ],
+      ),
+          ],
+    )
+      )
     );
   }
 }

@@ -1,11 +1,18 @@
 import 'package:amtelbot/Membership/Main/CartNumberDisplay.dart';
+import 'package:amtelbot/Membership/Main/MainMenu.dart';
 import 'package:amtelbot/Membership/Payment/Payment1.dart';
 import 'package:flutter/material.dart';
+import 'Product.dart';
 
 class Cart extends StatelessWidget {
+
+  final List<Product> cart;
+
+  Cart({required this.cart});
+
     void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Cartnumberdisplay();
+      return Mainmenu();
   }));
   }
 
@@ -68,6 +75,31 @@ class Cart extends StatelessWidget {
                   ),
                 ),
               ),
+ // Display selected products in the cart
+    Positioned(
+      left: 120,
+      top: 120,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Cart Items:',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 10),
+          for (var product in cart)
+            Text(
+              '${product.name} ${product.quantity} x RM ${product.price.toStringAsFixed(2)}',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+        ],
+      ),
+    ),
 
               // Back
               Positioned(
@@ -145,37 +177,8 @@ class Cart extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 137,
-                top: 136,
-                child: Text(
-                  'Nestle Milo Powder 1kg\nMaggie Curry Instant Noodle 5 x 75g\nF&N Sarsi 1.5L ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 36,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                    letterSpacing: 5.40,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 1074,
-                top: 118,
-                child: Text(
-                  '1 x RM 15.99\n1 x RM 5.45\n1 x RM 3.10',
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 36,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 1.44,
-                    letterSpacing: 5.40,
-                  ),
-                ),
-              ),
+              
+              
               Positioned(
                 left: 999,
                 top: 779,

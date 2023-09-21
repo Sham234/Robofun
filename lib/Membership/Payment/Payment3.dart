@@ -19,7 +19,7 @@ class Payment3 extends StatelessWidget {
 
   void navigateNextPage3(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Cart();
+      return Cart(cart: [],);
   }));
   }
 

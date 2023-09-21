@@ -1,4 +1,4 @@
-import 'package:amtelbot/Membership/Payment/PaymentQR.dart';
+import 'homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class FigmaToCodeApp extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
-          Paymentqr(),
+          HomePage(),
         ]),
       ),
     );

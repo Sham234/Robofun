@@ -13,7 +13,7 @@ void navigateNextPage(BuildContext ctx) {
 
   void navigateNextPage2(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Cart();
+      return Cart(cart: [],);
 }));
 }
 

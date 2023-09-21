@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'VerificationSuccessful.dart';
-import 'Membershipcardinput.dart';
+import 'MembershipIDinput.dart';
+
 
 class VerificationPage extends StatelessWidget {
 void navigateNextPage(BuildContext ctx) {
@@ -11,7 +12,7 @@ void navigateNextPage(BuildContext ctx) {
 
 void navigateNextPage2(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Membershipcardinput();
+      return Membershipidinput();
 }));
 }
   @override

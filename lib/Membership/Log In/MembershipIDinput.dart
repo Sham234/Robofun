@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'VerificationPage.dart';
 
 class Membershipidinput extends StatelessWidget {
+  final myController = TextEditingController();
+  
   void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
       return VerificationPage();
@@ -10,8 +12,10 @@ class Membershipidinput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return MaterialApp( 
+      home: Scaffold( 
+        body: Column(
+          children: [
         Container(
           width: 1550,
           height: 864,
@@ -141,36 +145,7 @@ class Membershipidinput extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 1089,
-                top: 752,
-                child: TextButton(
-                  onPressed: () {
-                    navigateNextPage(context);
-                  },
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.zero,
-                  ),
-                  child: Container(
-                    width: 144,
-                    height: 60,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFF1B41A4),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      shadows: [
-                        BoxShadow(
-                          color: Color(0xFF3197FD),
-                          blurRadius: 4,
-                          offset: Offset(0, 4),
-                          spreadRadius: 0,
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              
               Positioned(
                 left: 122,
                 top: 104,
@@ -265,19 +240,8 @@ class Membershipidinput extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 1129,
-                top: 765,
-                child: Text(
-                  'Next',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ),
+              
+              
               Positioned(
                 left: 1000,
                 top: 243,
@@ -305,63 +269,74 @@ class Membershipidinput extends StatelessWidget {
                         RoundedRectangleBorder(side: BorderSide(width: 0.50)),
                   ),
                   child: TextFormField(
-                    // You can customize the appearance of the input field here
+                    style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold, // Set the text to be bold
+                  ),
                     decoration: InputDecoration(
-                      hintText: 'Typing something',
-                      border: InputBorder.none, // Remove the default border
+                      hintText: '',
+                      border: InputBorder.none, 
                     ),
-                    // Create a controller to retrieve user input
-                    controller:
-                        TextEditingController(), // You can initialize this controller with an initial value if needed
-                    // You can handle the user's input using onChanged or onFieldSubmitted
+                    controller: myController, 
                     onChanged: (value) {
-                      // Handle user input as it changes
-                      // 'value' will contain the text entered by the user
+                      // Handle text changes here
                     },
                     onFieldSubmitted: (value) {
-                      // Handle user input when they submit the field (e.g., press Enter on the keyboard)
+                      // Handle form submission here
                     },
                   ),
                 ),
               ),
+            //next button
               Positioned(
-                left: 912,
-                top: 650,
-                child: Opacity(
-                  opacity: 0,
-                  child: Container(
-                    height: 45.04,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 45.04,
-                          child: Transform(
-                            transform: Matrix4.identity()
-                              ..translate(0.0, 0.0)
-                              ..rotateZ(-1.57),
-                            child: Container(
-                              width: 45.04,
-                              decoration: ShapeDecoration(
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    width: 1.50,
-                                    strokeAlign: BorderSide.strokeAlignCenter,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                left: 1089,
+                top: 758,
+                child: TextButton(
+                onPressed:  () {navigateNextPage(context);},
+              style:  TextButton.styleFrom (
+              padding:  EdgeInsets.zero,
+              ),
+                child: Container(
+                  width: 144,
+                  height: 60,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFF1B41A4),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
                     ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0xFF3197FD),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
                   ),
                 ),
+                ),
               ),
-            ],
-          ),
+
+              Positioned(
+                left: 1129,
+                top: 765,
+                child: Text(
+                  'Next',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    ),
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
+          ],
+    )
+      )
     );
   }
 }

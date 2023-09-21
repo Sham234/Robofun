@@ -1,11 +1,11 @@
-import 'package:amtelbot/Membership/Log In/MembershipCardinput.dart';
+import 'package:amtelbot/Membership/Log In/MembershipIDinput.dart';
 import 'package:amtelbot/Guest/StartasGuest.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   void navigateNextPage(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return Membershipcardinput();
+      return Membershipidinput();
     }));
   }
 
